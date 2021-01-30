@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-using System.Reflection;
 
 public class changefilter : MonoBehaviour
 {
     public VolumeProfile[] profiles;
+    public Volume volume;
     // Start is called before the first frame update
 
     void Start()
@@ -21,15 +21,14 @@ public class changefilter : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("volume")){
-            other.GetComponent<Volume>().profile = profiles[Random.Range(0,3)];
-            // Debug.Log(other.GetComponent<Volume>().profile.GetComponent<>);
-            // FieldInfo[] fields = typeof(VolumeComponent).GetFields();
-            // foreach (var field in fields)
-            // {
-            //     // Debug.Log(field);
-            // }
-            // other.GetComponent<Volume>().profile.colorAdjustments.colorFilter = new Color(0,0,0);
+        if(other.CompareTag("redFilter")){
+            volume.profile = profiles[2];
+        }
+        if (other.CompareTag("greenFilter")){
+           volume.profile = profiles[1];
+        }
+        if (other.CompareTag("blueFilter")){
+           volume.profile = profiles[0];
         }
 
     }
