@@ -56,7 +56,7 @@ public class AudioManager : MonoBehaviour {
 	void Start(){
             ChangeMVolume(1);
             ChangeSVolume(1);
-			Play("MainTheme");			
+			// Play("MainTheme");			
 	}
 
 	///<summary>Reproduce el audio con el nombre "name"</summary>	

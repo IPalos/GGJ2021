@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class pickup : MonoBehaviour {
 
-    GameObject currentObject;
+    public GameObject currentObject;
     public float grabDistance;
     public Transform objectPivot;
     public float objectSpeed;
 
     void Start () {
         currentObject = null;
-
-    }
-
-    // Update is called once per frame
-    void Update () {
 
     }
     void FixedUpdate () {

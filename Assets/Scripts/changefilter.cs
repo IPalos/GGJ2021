@@ -30,6 +30,9 @@ public class changefilter : MonoBehaviour
         if (other.CompareTag("blueFilter")){
            volume.profile = profiles[0];
         }
+        if (other.CompareTag("removeFilter")){
+            volume.profile = null;
+        }
 
     }
 }

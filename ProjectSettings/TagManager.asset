@@ -8,6 +8,14 @@ TagManager:
   - redFilter
   - greenFilter
   - blueFilter
+  - pasto
+  - concreto
+  - removeFilter
+  - keyhole
+  - key
+  - lata
+  - mesa
+  - caballete
   layers:
   - Default
   - TransparentFX
